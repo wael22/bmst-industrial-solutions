@@ -2,18 +2,24 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Package, Ruler, Weight, Thermometer, Layers } from "lucide-react";
 
-import paloxGrisJaune from "@/assets/products/palox-gris-jaune.jpg";
-import paloxVert from "@/assets/products/palox-vert.jpg";
-import caissesPlastique from "@/assets/products/caisses-plastique.jpg";
-import caissesMini from "@/assets/products/caisses-mini.jpg";
-import poubelle770 from "@/assets/products/poubelle-770l.jpg";
+import paloxGris from "@/assets/products/palox-gris.jpg";
+import paloxJaune from "@/assets/products/palox-jaune.jpg";
+import paloxAjoure from "@/assets/products/palox-ajoure.jpg";
+import paloxAjoureRoulettes from "@/assets/products/palox-ajoure-roulettes.jpg";
+import caissePlastique from "@/assets/products/caisse-plastique.jpg";
+import caisse4Carreaux from "@/assets/products/caisse-4carreaux.jpg";
+import caisseDattes from "@/assets/products/caisse-dattes.jpg";
+import mini2kg from "@/assets/products/mini-2kg.jpg";
+import mini1kg from "@/assets/products/mini-1kg.jpg";
+import mini5kg from "@/assets/products/mini-5kg.jpg";
+import poubelle770 from "@/assets/products/poubelle-770l-clean.jpg";
 
 const products = [
   {
-    image: paloxGrisJaune,
-    title: "Palox — Parois pleines",
+    image: paloxGris,
+    title: "Palox — Parois pleines (Gris)",
     category: "Stockage & Transport",
-    desc: "Conteneur grand volume pour le stockage et le transport. Structure renforcée, résistante aux chocs et aux UV.",
+    desc: "Conteneur grand volume à parois pleines. Structure renforcée, résistante aux chocs et aux UV.",
     highlights: [
       { icon: Package, label: "690 L" },
       { icon: Ruler, label: "1200 × 1000 × 772 mm" },
@@ -21,13 +27,27 @@ const products = [
       { icon: Layers, label: "5000 kg gerbé" },
       { icon: Thermometer, label: "-20°C / +50°C" },
     ],
-    colors: ["Gris", "Jaune"],
+    colors: ["Gris"],
   },
   {
-    image: paloxVert,
+    image: paloxJaune,
+    title: "Palox — Parois pleines (Jaune)",
+    category: "Stockage & Transport",
+    desc: "Conteneur grand volume à parois pleines. Charge dynamique 500 kg, idéal pour le stockage intensif.",
+    highlights: [
+      { icon: Package, label: "690 L" },
+      { icon: Ruler, label: "1200 × 1000 × 772 mm" },
+      { icon: Weight, label: "38 kg" },
+      { icon: Layers, label: "5000 kg gerbé" },
+      { icon: Thermometer, label: "-20°C / +50°C" },
+    ],
+    colors: ["Jaune"],
+  },
+  {
+    image: paloxAjoure,
     title: "Palox — Parois ajourées",
     category: "Agriculture",
-    desc: "Version ventilée idéale pour les produits agricoles. Disponible avec roulettes pour une manutention facile.",
+    desc: "Version ventilée pour produits agricoles. Parois ajourées pour une meilleure circulation d'air.",
     highlights: [
       { icon: Package, label: "690 L" },
       { icon: Ruler, label: "1200 × 1000 × 772 mm" },
@@ -38,34 +58,89 @@ const products = [
     colors: ["Vert"],
   },
   {
-    image: caissesPlastique,
-    title: "Caisses plastique",
+    image: paloxAjoureRoulettes,
+    title: "Palox — Sur roulettes",
     category: "Manutention",
-    desc: "Gamme complète de caisses robustes pour la manutention professionnelle. Plusieurs tailles disponibles.",
+    desc: "Palox ajouré équipé de roulettes pour une manutention facile. Idéal pour les entrepôts.",
     highlights: [
-      { icon: Ruler, label: "54 × 35 × 28,5 cm" },
-      { icon: Weight, label: "à partir de 0,6 kg" },
-      { icon: Package, label: "3 formats" },
+      { icon: Package, label: "690 L" },
+      { icon: Ruler, label: "1200 × 1000 × 772 mm" },
+      { icon: Weight, label: "34,5 kg" },
+      { icon: Layers, label: "500 kg dynamique" },
     ],
-    colors: ["Bleu", "Jaune", "Vert", "Rouge", "Noir"],
+    colors: ["Vert"],
   },
   {
-    image: caissesMini,
-    title: "Caisses Mini",
-    category: "Conditionnement",
-    desc: "Caisses compactes pour le conditionnement et la vente directe de fruits, dattes et produits frais.",
+    image: caissePlastique,
+    title: "Caisse plastique",
+    category: "Manutention",
+    desc: "Caisse robuste pour la manutention professionnelle. Grande contenance et solidité.",
     highlights: [
-      { icon: Package, label: "1 kg / 2 kg / 5 kg" },
+      { icon: Ruler, label: "54 × 35 × 28,5 cm" },
+      { icon: Weight, label: "1,8 kg" },
+    ],
+    colors: ["Bleu", "Jaune", "Vert", "Rouge"],
+  },
+  {
+    image: caisse4Carreaux,
+    title: "Caisse 4 Carreaux",
+    category: "Agriculture",
+    desc: "Caisse basse ajourée, parfaite pour le transport de fruits et légumes frais.",
+    highlights: [
+      { icon: Ruler, label: "50 × 30 × 12 cm" },
+      { icon: Weight, label: "0,8 kg" },
+    ],
+    colors: ["Bleu", "Noir", "Vert", "Rouge", "Jaune"],
+  },
+  {
+    image: caisseDattes,
+    title: "Caisse pour dattes",
+    category: "Agroalimentaire",
+    desc: "Caisse spéciale pour le conditionnement et le transport des dattes.",
+    highlights: [
+      { icon: Ruler, label: "50 × 30 × 22 cm" },
+      { icon: Weight, label: "0,6 kg" },
+    ],
+    colors: ["Bleu", "Vert", "Jaune"],
+  },
+  {
+    image: mini2kg,
+    title: "Mini 2 kg",
+    category: "Conditionnement",
+    desc: "Caissette compacte pour la vente directe de fruits, dattes et produits frais.",
+    highlights: [
       { icon: Ruler, label: "28 × 17 × 7 cm" },
-      { icon: Weight, label: "à partir de 0,1 kg" },
+      { icon: Weight, label: "0,125 kg" },
     ],
     colors: ["Bleu", "Jaune", "Vert", "Rouge", "Orange"],
+  },
+  {
+    image: mini1kg,
+    title: "Mini 1 kg",
+    category: "Conditionnement",
+    desc: "Plus petite caissette pour portions individuelles et vente au détail.",
+    highlights: [
+      { icon: Ruler, label: "28 × 17 × 7 cm" },
+      { icon: Weight, label: "0,1 kg" },
+    ],
+    colors: ["Jaune"],
+  },
+  {
+    image: mini5kg,
+    title: "Mini 5 kg",
+    category: "Conditionnement",
+    desc: "Caissette moyenne pour le conditionnement en gros de fruits et produits frais.",
+    highlights: [
+      { icon: Ruler, label: "39 × 27,5 × 11 cm" },
+      { icon: Weight, label: "0,29 kg" },
+    ],
+    colors: ["Vert", "Jaune"],
   },
   {
     image: poubelle770,
     title: "Poubelle 770 L",
     category: "Collectivités",
-    desc: "Poubelle HDPE haute résistance par injection plastique. Usage intensif en collectivités et zones industrielles.",
+    desc: "Poubelle HDPE haute résistance par injection plastique. Compatible lève-conteneurs normalisés EN 840.",
     highlights: [
       { icon: Package, label: "770 L" },
       { icon: Ruler, label: "1330 × 1366 × 814 mm" },
@@ -109,17 +184,16 @@ const ProductsSection = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {products.map((p, i) => (
             <motion.div
               key={p.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.4 }}
+              transition={{ delay: i * 0.05, duration: 0.4 }}
               className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
             >
-              {/* Image */}
               <div className="relative aspect-[4/3] overflow-hidden bg-muted">
                 <img
                   src={p.image}
@@ -132,46 +206,42 @@ const ProductsSection = () => {
                 </span>
               </div>
 
-              {/* Content */}
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="font-display text-xl font-bold text-foreground mb-2">
+              <div className="p-5 flex flex-col flex-1">
+                <h3 className="font-display text-lg font-bold text-foreground mb-1.5">
                   {p.title}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
                   {p.desc}
                 </p>
 
-                {/* Specs grid */}
-                <div className="grid grid-cols-2 gap-2 mb-4">
+                <div className="grid grid-cols-2 gap-1.5 mb-3">
                   {p.highlights.map((h) => (
                     <div
                       key={h.label}
-                      className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/60 rounded-lg px-3 py-2"
+                      className="flex items-center gap-1.5 text-[11px] text-muted-foreground bg-muted/60 rounded-lg px-2.5 py-1.5"
                     >
-                      <h.icon className="w-3.5 h-3.5 text-primary shrink-0" />
+                      <h.icon className="w-3 h-3 text-primary shrink-0" />
                       <span>{h.label}</span>
                     </div>
                   ))}
                 </div>
 
-                {/* Colors */}
-                <div className="flex flex-wrap gap-1.5 mb-5">
+                <div className="flex flex-wrap gap-1 mb-4">
                   {p.colors.map((c) => (
                     <span
                       key={c}
-                      className="text-[11px] font-medium bg-accent/10 text-accent px-2.5 py-0.5 rounded-full"
+                      className="text-[10px] font-medium bg-accent/10 text-accent px-2 py-0.5 rounded-full"
                     >
                       {c}
                     </span>
                   ))}
                 </div>
 
-                {/* CTA */}
                 <div className="mt-auto">
                   <Button
                     asChild
                     size="sm"
-                    className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
+                    className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold text-xs"
                   >
                     <a href="#contact">Demander un devis</a>
                   </Button>
