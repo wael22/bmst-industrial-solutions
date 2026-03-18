@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
+import { Package, Ruler, Weight, Thermometer, Layers } from "lucide-react";
 
 import paloxGrisJaune from "@/assets/products/palox-gris-jaune.jpg";
 import paloxVert from "@/assets/products/palox-vert.jpg";
@@ -11,65 +11,66 @@ import poubelle770 from "@/assets/products/poubelle-770l.jpg";
 const products = [
   {
     image: paloxGrisJaune,
-    title: "Palox Plastique — Parois pleines",
+    title: "Palox — Parois pleines",
+    category: "Stockage & Transport",
     desc: "Conteneur grand volume pour le stockage et le transport. Structure renforcée, résistante aux chocs et aux UV.",
-    specs: [
-      "Capacité : 690 litres",
-      "Dimensions : 1200 × 1000 × 772 mm",
-      "Poids : 38 kg",
-      "Charge dynamique : 500 kg",
-      "Charge gerbée : 5000 kg",
-      "Température : -20°C / +50°C",
+    highlights: [
+      { icon: Package, label: "690 L" },
+      { icon: Ruler, label: "1200 × 1000 × 772 mm" },
+      { icon: Weight, label: "38 kg" },
+      { icon: Layers, label: "5000 kg gerbé" },
+      { icon: Thermometer, label: "-20°C / +50°C" },
     ],
     colors: ["Gris", "Jaune"],
   },
   {
     image: paloxVert,
-    title: "Palox Plastique — Parois ajourées",
+    title: "Palox — Parois ajourées",
+    category: "Agriculture",
     desc: "Version ventilée idéale pour les produits agricoles. Disponible avec roulettes pour une manutention facile.",
-    specs: [
-      "Capacité : 690 litres",
-      "Dimensions : 1200 × 1000 × 772 mm",
-      "Poids : 34,5 kg",
-      "Charge dynamique : 500 kg",
-      "Charge gerbée : 5000 kg",
-      "Température : -20°C / +50°C",
+    highlights: [
+      { icon: Package, label: "690 L" },
+      { icon: Ruler, label: "1200 × 1000 × 772 mm" },
+      { icon: Weight, label: "34,5 kg" },
+      { icon: Layers, label: "5000 kg gerbé" },
+      { icon: Thermometer, label: "-20°C / +50°C" },
     ],
     colors: ["Vert"],
   },
   {
     image: caissesPlastique,
-    title: "Caisses en plastique",
-    desc: "Gamme complète de caisses robustes pour la manutention professionnelle. Plusieurs tailles et usages disponibles.",
-    specs: [
-      "Caisse standard : 54 × 35 × 28,5 cm — 1,800 kg",
-      "4 Carreaux : 50 × 30 × 12 cm — 0,800 kg",
-      "Caisses pour dattes : 50 × 30 × 22 cm — 0,600 kg",
+    title: "Caisses plastique",
+    category: "Manutention",
+    desc: "Gamme complète de caisses robustes pour la manutention professionnelle. Plusieurs tailles disponibles.",
+    highlights: [
+      { icon: Ruler, label: "54 × 35 × 28,5 cm" },
+      { icon: Weight, label: "à partir de 0,6 kg" },
+      { icon: Package, label: "3 formats" },
     ],
     colors: ["Bleu", "Jaune", "Vert", "Rouge", "Noir"],
   },
   {
     image: caissesMini,
     title: "Caisses Mini",
+    category: "Conditionnement",
     desc: "Caisses compactes pour le conditionnement et la vente directe de fruits, dattes et produits frais.",
-    specs: [
-      "Mini 1 kg : 28 × 17 × 7 cm — 0,100 kg",
-      "Mini 2 kg : 28 × 17 × 7 cm — 0,125 kg",
-      "Mini 5 kg : 39 × 27,5 × 11 cm — 0,290 kg",
+    highlights: [
+      { icon: Package, label: "1 kg / 2 kg / 5 kg" },
+      { icon: Ruler, label: "28 × 17 × 7 cm" },
+      { icon: Weight, label: "à partir de 0,1 kg" },
     ],
     colors: ["Bleu", "Jaune", "Vert", "Rouge", "Orange"],
   },
   {
     image: poubelle770,
-    title: "Poubelle Plastique 770 L",
-    desc: "Poubelle HDPE haute résistance par injection plastique. Conçue pour usage intensif en collectivités et zones industrielles.",
-    specs: [
-      "Dimensions cuve : 1130 × 1366 × 814 mm",
-      "Dimensions avec roues : 1330 × 1366 × 814 mm",
-      "Poids : 35 kg (structure renforcée)",
-      "Résistante aux chocs et aux UV",
-      "Compatible lève-conteneurs (EN 840)",
-      "4 roues de 200 mm (2 avec frein)",
+    title: "Poubelle 770 L",
+    category: "Collectivités",
+    desc: "Poubelle HDPE haute résistance par injection plastique. Usage intensif en collectivités et zones industrielles.",
+    highlights: [
+      { icon: Package, label: "770 L" },
+      { icon: Ruler, label: "1330 × 1366 × 814 mm" },
+      { icon: Weight, label: "35 kg" },
+      { icon: Layers, label: "Norme EN 840" },
     ],
     colors: ["Vert", "Personnalisable"],
   },
@@ -77,7 +78,7 @@ const products = [
 
 const ProductsSection = () => {
   return (
-    <section id="produits" className="py-24 bg-muted/50">
+    <section id="produits" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.span
@@ -108,70 +109,73 @@ const ProductsSection = () => {
           </motion.p>
         </div>
 
-        <div className="space-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((p, i) => (
             <motion.div
               key={p.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1, duration: 0.5 }}
-              className={`flex flex-col ${i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl transition-shadow duration-300`}
+              transition={{ delay: i * 0.08, duration: 0.4 }}
+              className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
             >
               {/* Image */}
-              <div className="lg:w-1/2 relative overflow-hidden bg-muted">
+              <div className="relative aspect-[4/3] overflow-hidden bg-muted">
                 <img
                   src={p.image}
                   alt={p.title}
-                  className="w-full h-full object-cover min-h-[300px] lg:min-h-[420px]"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
+                <span className="absolute top-3 left-3 text-[11px] font-semibold uppercase tracking-wider bg-primary text-primary-foreground px-3 py-1 rounded-full">
+                  {p.category}
+                </span>
               </div>
 
               {/* Content */}
-              <div className="lg:w-1/2 p-8 flex flex-col justify-center">
-                <h3 className="font-display text-2xl font-bold text-foreground mb-3">
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="font-display text-xl font-bold text-foreground mb-2">
                   {p.title}
                 </h3>
-                <p className="text-muted-foreground mb-5 leading-relaxed">
+                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                   {p.desc}
                 </p>
 
-                {/* Specs */}
-                <div className="mb-5 space-y-1.5">
-                  <span className="text-xs font-semibold text-accent uppercase tracking-wider">
-                    Spécifications
-                  </span>
-                  <ul className="space-y-1">
-                    {p.specs.map((s) => (
-                      <li key={s} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <ChevronRight className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                        <span>{s}</span>
-                      </li>
-                    ))}
-                  </ul>
+                {/* Specs grid */}
+                <div className="grid grid-cols-2 gap-2 mb-4">
+                  {p.highlights.map((h) => (
+                    <div
+                      key={h.label}
+                      className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/60 rounded-lg px-3 py-2"
+                    >
+                      <h.icon className="w-3.5 h-3.5 text-primary shrink-0" />
+                      <span>{h.label}</span>
+                    </div>
+                  ))}
                 </div>
 
                 {/* Colors */}
-                <div className="mb-6">
-                  <span className="text-xs font-semibold text-accent uppercase tracking-wider">
-                    Couleurs disponibles
-                  </span>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {p.colors.map((c) => (
-                      <span
-                        key={c}
-                        className="text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full"
-                      >
-                        {c}
-                      </span>
-                    ))}
-                  </div>
+                <div className="flex flex-wrap gap-1.5 mb-5">
+                  {p.colors.map((c) => (
+                    <span
+                      key={c}
+                      className="text-[11px] font-medium bg-accent/10 text-accent px-2.5 py-0.5 rounded-full"
+                    >
+                      {c}
+                    </span>
+                  ))}
                 </div>
 
-                <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold w-fit">
-                  <a href="#contact">Demander un devis</a>
-                </Button>
+                {/* CTA */}
+                <div className="mt-auto">
+                  <Button
+                    asChild
+                    size="sm"
+                    className="w-full bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
+                  >
+                    <a href="#contact">Demander un devis</a>
+                  </Button>
+                </div>
               </div>
             </motion.div>
           ))}
