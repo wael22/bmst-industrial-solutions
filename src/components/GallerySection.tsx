@@ -2,13 +2,26 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
 
-const placeholders = Array.from({ length: 6 }, (_, i) => ({
-  id: i + 1,
-  label: `Photo ${i + 1}`,
-}));
+import caissesPalettes from "@/assets/gallery/caisses-palettes.jpg";
+import paloxPeche from "@/assets/gallery/palox-peche.jpg";
+import paloxJaune from "@/assets/gallery/palox-jaune.jpg";
+import paloxStockage from "@/assets/gallery/palox-stockage.jpg";
+import poubelleVerte from "@/assets/gallery/poubelle-verte.jpg";
+import paloxRoulettes from "@/assets/gallery/palox-roulettes.jpg";
+
+const galleryImages = [
+  { id: 1, src: caissesPalettes, alt: "Caisses palettes pliables BMST" },
+  { id: 2, src: paloxPeche, alt: "Palox plastique pour la pêche" },
+  { id: 3, src: paloxJaune, alt: "Palox jaune pour l'industrie oléicole" },
+  { id: 4, src: paloxStockage, alt: "Palox empilés pour stockage de pommes de terre" },
+  { id: 5, src: poubelleVerte, alt: "Poubelle 770L verte BMST Made in Tunisia" },
+  { id: 6, src: paloxRoulettes, alt: "Palox plastique sur roulettes" },
+];
 
 const GallerySection = () => {
   const [lightbox, setLightbox] = useState<number | null>(null);
+
+  const currentImage = galleryImages.find((img) => img.id === lightbox);
 
   return (
     <section className="py-24 bg-muted/50">
@@ -31,32 +44,32 @@ const GallerySection = () => {
           >
             Nos réalisations
           </motion.h2>
-          <p className="text-muted-foreground mt-4 text-sm">
-            Espaces réservés — uploadez vos images réelles via le chat pour les remplacer.
-          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {placeholders.map((p, i) => (
+          {galleryImages.map((img, i) => (
             <motion.div
-              key={p.id}
+              key={img.id}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-border flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300 group"
-              onClick={() => setLightbox(p.id)}
+              className="aspect-[4/3] rounded-xl border border-border overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300 group"
+              onClick={() => setLightbox(img.id)}
             >
-              <span className="text-muted-foreground text-sm group-hover:text-primary transition-colors">
-                {p.label}
-              </span>
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
             </motion.div>
           ))}
         </div>
       </div>
 
       {/* Lightbox */}
-      {lightbox !== null && (
+      {lightbox !== null && currentImage && (
         <div
           className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-8"
           onClick={() => setLightbox(null)}
@@ -67,9 +80,12 @@ const GallerySection = () => {
           >
             <X size={32} />
           </button>
-          <div className="bg-card rounded-xl w-full max-w-2xl aspect-[4/3] flex items-center justify-center">
-            <span className="text-muted-foreground">Photo {lightbox}</span>
-          </div>
+          <img
+            src={currentImage.src}
+            alt={currentImage.alt}
+            className="max-w-full max-h-[85vh] rounded-xl object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
         </div>
       )}
     </section>
