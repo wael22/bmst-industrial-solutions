@@ -44,7 +44,7 @@ const products = [
     image: caissePlastique, titleKey: "Caisse plastique", categoryKey: "manutention" as const,
     desc: { fr: "Caisse robuste pour la manutention professionnelle. Grande contenance et solidité.", en: "Robust crate for professional handling. Large capacity and solidity.", ar: "صندوق متين للمناولة المهنية. سعة كبيرة ومتانة." },
     highlights: [{ icon: Ruler, label: "54 × 35 × 28,5 cm" }, { icon: Weight, label: "1,8 kg" }],
-    colors: ["Bleu", "Jaune", "Vert", "Rouge"],
+    colors: ["#2980B9", "#F4D03F", "#27AE60", "#E74C3C"],
   },
   {
     image: caisse4Carreaux, titleKey: "Caisse 4 Carreaux", categoryKey: "agriculture" as const,
