@@ -62,7 +62,7 @@ const products = [
     image: mini2kg, titleKey: "Mini 2 kg", categoryKey: "conditionnement" as const,
     desc: { fr: "Caissette compacte pour la vente directe de fruits, dattes et produits frais.", en: "Compact crate for direct sale of fruits, dates and fresh products.", ar: "صندوق صغير للبيع المباشر للفواكه والتمور والمنتجات الطازجة." },
     highlights: [{ icon: Ruler, label: "28 × 17 × 7 cm" }, { icon: Weight, label: "0,125 kg" }],
-    colors: ["Bleu", "Jaune", "Vert", "Rouge", "Orange"],
+    colors: ["#2980B9", "#F4D03F", "#27AE60", "#E74C3C", "#E67E22"],
   },
   {
     image: mini1kg, titleKey: "Mini 1 kg", categoryKey: "conditionnement" as const,
