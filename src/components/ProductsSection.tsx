@@ -20,7 +20,7 @@ const products = [
     image: paloxGris, titleKey: "Palox — Parois pleines (Gris)", categoryKey: "stockage" as const,
     desc: { fr: "Conteneur grand volume à parois pleines. Structure renforcée, résistante aux chocs et aux UV.", en: "Large volume container with solid walls. Reinforced structure, resistant to shocks and UV.", ar: "حاوية كبيرة الحجم بجدران صلبة. هيكل معزز مقاوم للصدمات والأشعة فوق البنفسجية." },
     highlights: [{ icon: Package, label: "690 L" }, { icon: Ruler, label: "1200 × 1000 × 772 mm" }, { icon: Weight, label: "38 kg" }, { icon: Layers, label: "5000 kg" }, { icon: Thermometer, label: "-20°C / +50°C" }],
-    colors: ["Gris"],
+    colors: ["#808080"],
   },
   {
     image: paloxJaune, titleKey: "Palox — Parois pleines (Jaune)", categoryKey: "stockage" as const,
