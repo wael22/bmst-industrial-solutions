@@ -50,7 +50,7 @@ const products = [
     image: caisse4Carreaux, titleKey: "Caisse 4 Carreaux", categoryKey: "agriculture" as const,
     desc: { fr: "Caisse basse ajourée, parfaite pour le transport de fruits et légumes frais.", en: "Low perforated crate, perfect for transporting fresh fruits and vegetables.", ar: "صندوق منخفض مثقب، مثالي لنقل الفواكه والخضروات الطازجة." },
     highlights: [{ icon: Ruler, label: "50 × 30 × 12 cm" }, { icon: Weight, label: "0,8 kg" }],
-    colors: ["Bleu", "Noir", "Vert", "Rouge", "Jaune"],
+    colors: ["#2980B9", "#2C3E50", "#27AE60", "#E74C3C", "#F4D03F"],
   },
   {
     image: caisseDattes, titleKey: "Caisse pour dattes", categoryKey: "agroalimentaire" as const,
