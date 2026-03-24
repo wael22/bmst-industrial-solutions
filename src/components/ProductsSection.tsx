@@ -38,7 +38,7 @@ const products = [
     image: paloxAjoureRoulettes, titleKey: "Palox — Sur roulettes", categoryKey: "manutention" as const,
     desc: { fr: "Palox ajouré équipé de roulettes pour une manutention facile. Idéal pour les entrepôts.", en: "Perforated palox equipped with wheels for easy handling. Ideal for warehouses.", ar: "بالوكس مثقب مجهز بعجلات لسهولة المناولة. مثالي للمستودعات." },
     highlights: [{ icon: Package, label: "690 L" }, { icon: Ruler, label: "1200 × 1000 × 772 mm" }, { icon: Weight, label: "34,5 kg" }, { icon: Layers, label: "500 kg" }],
-    colors: ["Vert"],
+    colors: ["#27AE60"],
   },
   {
     image: caissePlastique, titleKey: "Caisse plastique", categoryKey: "manutention" as const,
