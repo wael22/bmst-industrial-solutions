@@ -32,7 +32,7 @@ const products = [
     image: paloxAjoure, titleKey: "Palox — Parois ajourées", categoryKey: "agriculture" as const,
     desc: { fr: "Version ventilée pour produits agricoles. Parois ajourées pour une meilleure circulation d'air.", en: "Ventilated version for agricultural products. Perforated walls for better air circulation.", ar: "نسخة مهواة للمنتجات الزراعية. جدران مثقبة لتهوية أفضل." },
     highlights: [{ icon: Package, label: "690 L" }, { icon: Ruler, label: "1200 × 1000 × 772 mm" }, { icon: Weight, label: "34,5 kg" }, { icon: Layers, label: "5000 kg" }, { icon: Thermometer, label: "-20°C / +50°C" }],
-    colors: ["Vert"],
+    colors: ["#27AE60"],
   },
   {
     image: paloxAjoureRoulettes, titleKey: "Palox — Sur roulettes", categoryKey: "manutention" as const,
