@@ -74,7 +74,7 @@ const products = [
     image: mini5kg, titleKey: "Mini 5 kg", categoryKey: "conditionnement" as const,
     desc: { fr: "Caissette moyenne pour le conditionnement en gros de fruits et produits frais.", en: "Medium crate for bulk packaging of fruits and fresh products.", ar: "صندوق متوسط لتعبئة الفواكه والمنتجات الطازجة بالجملة." },
     highlights: [{ icon: Ruler, label: "39 × 27,5 × 11 cm" }, { icon: Weight, label: "0,29 kg" }],
-    colors: ["Vert", "Jaune"],
+    colors: ["#27AE60", "#F4D03F"],
   },
   {
     image: poubelle770, titleKey: "Poubelle 770 L", categoryKey: "collectivites" as const,
