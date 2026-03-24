@@ -80,7 +80,7 @@ const products = [
     image: poubelle770, titleKey: "Poubelle 770 L", categoryKey: "collectivites" as const,
     desc: { fr: "Poubelle HDPE haute résistance par injection plastique. Compatible lève-conteneurs normalisés EN 840.", en: "High-resistance HDPE bin by plastic injection. Compatible with EN 840 standardized container lifters.", ar: "حاوية HDPE عالية المقاومة بالحقن البلاستيكي. متوافقة مع رافعات الحاويات المعيارية EN 840." },
     highlights: [{ icon: Package, label: "770 L" }, { icon: Ruler, label: "1330 × 1366 × 814 mm" }, { icon: Weight, label: "35 kg" }, { icon: Layers, label: "EN 840" }],
-    colors: ["Vert"],
+    colors: ["#27AE60"],
   },
 ];
 
