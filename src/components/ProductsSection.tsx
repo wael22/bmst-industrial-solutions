@@ -133,9 +133,9 @@ const ProductsSection = () => {
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-1 mb-4">
+                <div className="flex flex-wrap gap-1.5 mb-4">
                   {p.colors.map((c) => (
-                    <span key={c} className="text-[10px] font-medium bg-accent/10 text-accent px-2 py-0.5 rounded-full">{c}</span>
+                    <span key={c} className="w-5 h-5 rounded-full border border-border shadow-sm" style={{ backgroundColor: c }} title={c} />
                   ))}
                 </div>
 
