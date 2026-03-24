@@ -68,7 +68,7 @@ const products = [
     image: mini1kg, titleKey: "Mini 1 kg", categoryKey: "conditionnement" as const,
     desc: { fr: "Plus petite caissette pour portions individuelles et vente au détail.", en: "Smallest crate for individual portions and retail sale.", ar: "أصغر صندوق للحصص الفردية والبيع بالتجزئة." },
     highlights: [{ icon: Ruler, label: "28 × 17 × 7 cm" }, { icon: Weight, label: "0,1 kg" }],
-    colors: ["Jaune"],
+    colors: ["#F4D03F"],
   },
   {
     image: mini5kg, titleKey: "Mini 5 kg", categoryKey: "conditionnement" as const,
