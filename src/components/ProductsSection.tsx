@@ -26,7 +26,7 @@ const products = [
     image: paloxJaune, titleKey: "Palox — Parois pleines (Jaune)", categoryKey: "stockage" as const,
     desc: { fr: "Conteneur grand volume à parois pleines. Charge dynamique 500 kg, idéal pour le stockage intensif.", en: "Large volume solid-wall container. 500 kg dynamic load, ideal for intensive storage.", ar: "حاوية كبيرة بجدران صلبة. حمولة ديناميكية 500 كجم، مثالية للتخزين المكثف." },
     highlights: [{ icon: Package, label: "690 L" }, { icon: Ruler, label: "1200 × 1000 × 772 mm" }, { icon: Weight, label: "38 kg" }, { icon: Layers, label: "5000 kg" }, { icon: Thermometer, label: "-20°C / +50°C" }],
-    colors: ["Jaune"],
+    colors: ["#F4D03F"],
   },
   {
     image: paloxAjoure, titleKey: "Palox — Parois ajourées", categoryKey: "agriculture" as const,
