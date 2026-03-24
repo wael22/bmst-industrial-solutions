@@ -56,7 +56,7 @@ const products = [
     image: caisseDattes, titleKey: "Caisse pour dattes", categoryKey: "agroalimentaire" as const,
     desc: { fr: "Caisse spéciale pour le conditionnement et le transport des dattes.", en: "Special crate for packaging and transporting dates.", ar: "صندوق خاص لتعبئة ونقل التمور." },
     highlights: [{ icon: Ruler, label: "50 × 30 × 22 cm" }, { icon: Weight, label: "0,6 kg" }],
-    colors: ["Bleu", "Vert", "Jaune"],
+    colors: ["#2980B9", "#27AE60", "#F4D03F"],
   },
   {
     image: mini2kg, titleKey: "Mini 2 kg", categoryKey: "conditionnement" as const,
